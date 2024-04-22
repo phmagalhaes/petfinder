@@ -1,0 +1,687 @@
+/* Boot CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  --azulEscuro: #2c4674;
+  --azulClaro: #c8daff;
+  --verde: #519e8a;
+  --laranja: #d1723f;
+  --verdeClaro: #cbe8db;
+  --laranjaClaro: #e8dbd4;
+}
+
+/* estilização do body para centralização do aplicativo */
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* menu  */
+.menu {
+  width: 414px;
+  max-width: 414px;
+  min-height: 800px;
+  background-color: rgba(255, 255, 255, 0.705);
+  position: absolute;
+  z-index: 3;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  transition: all 250ms ease;
+}
+.menu div {
+  width: 80%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  color: white;
+  padding: 10px 0;
+}
+.menu div:first-child {
+  margin-top: 100px;
+}
+.menu div p {
+  margin: 0 10px;
+}
+.menu_home {
+  background-color: var(--azulEscuro);
+  cursor: pointer;
+}
+.menu_dogs {
+  background-color: var(--verde);
+  cursor: pointer;
+}
+.menu_cats {
+  background-color: var(--laranja);
+  cursor: pointer;
+}
+/* tamanho do aplicativo */
+.app {
+  width: 414px;
+  max-width: 414px;
+  min-height: 800px;
+}
+
+/* PAGINA HOME */
+.homePage {
+  background: linear-gradient(var(--azulClaro), var(--azulEscuro));
+  width: 414px;
+  min-height: 800px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+/* PAGINA HOME - botoes do topo */
+.homePage_button {
+  margin: 40px 0;
+}
+.homePage_button input {
+  display: none;
+}
+.homePage_button input + label:before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+}
+.homePage_button input:checked + label:before {
+  background-color: var(--azulEscuro);
+}
+/* PAGINA HOME - titulo */
+.homePage_title {
+  margin-top: 60px;
+  text-align: center;
+  width: 60%;
+}
+.homePage_title h1 {
+  color: var(--azulEscuro);
+  font-size: 54px;
+  font-weight: 400;
+}
+.homePage_title p {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+/* PAGINA HOME - imagem */
+.homePage_img {
+  position: absolute;
+  bottom: -4px;
+}
+/* PAGINA HOME - botao para troca de pagina */
+.homePage_search {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--azulEscuro);
+  border-radius: 50%;
+  transition: all 250ms ease;
+  position: absolute;
+  bottom: 50px;
+}
+.homePage_search:hover {
+  width: 75px;
+  height: 75px;
+
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+/* PAGINA CACHORROS */
+.dogsPage {
+  background: var(--verdeClaro);
+  width: 414px;
+  min-height: 800px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+/* PAGINA CACHORROS - topo*/
+.dogsPage_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 30px;
+  position: relative;
+}
+.dogsPage_top img:first-child {
+  transition: all 250ms ease;
+  position: absolute;
+  left: 30px;
+}
+.dogsPage_top img:first-child:hover {
+  margin-left: -10px;
+  cursor: pointer;
+}
+.dogsPage_top p {
+  font-size: 20px;
+  color: var(--azulEscuro);
+  font-weight: 500;
+}
+.dogsPage_top img:last-child {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+  z-index: 4;
+}
+/* PAGINA CACHORROS - input */
+.dogsPage_input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 30px;
+}
+.dogsPage_input div {
+  height: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px 0 0 50px;
+  padding: 0 10px;
+}
+.dogsPage_input input {
+  border: none;
+  width: 100%;
+  border-radius: 0 50px 50px 0;
+  height: 30px;
+  color: var(--azulEscuro);
+  font-weight: 400;
+}
+.dogsPage_input input:focus {
+  outline: none;
+}
+/* PAGINA CACHORROS - botoes */
+.dogsPage_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+  position: relative;
+  margin-top: 30px;
+}
+.dogsPage_buttons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+.dogsPage_buttons div:hover {
+  cursor: pointer;
+}
+.dogsPage_buttons div p {
+  margin: 0 10px;
+  font-weight: 500;
+}
+.dogsPage_buttons_dog {
+  background-color: var(--verde);
+  color: white;
+  padding: 10px 5px;
+  position: absolute;
+  transition: all 250ms ease;
+  width: 40%;
+}
+.dogsPage_buttons_dog:hover {
+  padding: 15px 10px;
+}
+.dogsPage_buttons_cat {
+  background-color: white;
+  color: var(--azulEscuro);
+  padding: 10px 5px;
+  position: absolute;
+  transition: all 250ms ease;
+  width: 40%;
+  right: 30px;
+}
+.dogsPage_buttons_cat:hover {
+  padding: 15px 10px;
+}
+/* PAGINA CACHORROS - lista */
+.dogsPage_dogsList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+/* PAGINA CACHORROS - cards */
+.dogsPage_dogsList_card {
+  width: 170px;
+  height: 260px;
+}
+.dogsPage_dogsList_card:hover {
+  cursor: pointer;
+}
+.card_img {
+  background-color: var(--verde);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: 160px;
+  border-radius: 30px 30px 0 0;
+}
+.dogsPage_dogsList_card:hover .card_img {
+  background-color: white;
+  transition: background-color 400ms 200ms ease;
+}
+.card_text {
+  background-color: white;
+  height: 100px;
+  border-radius: 0 0 30px 30px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--azulEscuro);
+}
+.card_text p:first-child {
+  font-size: 20px;
+  font-weight: 600;
+}
+.card_text div {
+  align-self: flex-end;
+}
+.dogsPage_dogsList_card:hover .card_text {
+  background-color: var(--verde);
+  transition: all 400ms ease;
+  color: white;
+}
+
+/* PAGINA GATOS */
+.catsPage {
+  background: var(--laranjaClaro);
+  width: 414px;
+  min-height: 800px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+/* PAGINA GATOS - topo*/
+.catsPage_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 30px;
+  position: relative;
+}
+.catsPage_top img:first-child {
+  transition: all 250ms ease;
+  position: absolute;
+  left: 30px;
+}
+.catsPage_top img:first-child:hover {
+  margin-left: -10px;
+  cursor: pointer;
+}
+.catsPage_top p {
+  font-size: 20px;
+  color: var(--azulEscuro);
+  font-weight: 500;
+}
+.catsPage_top img:last-child {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+  z-index: 4;
+}
+/* PAGINA GATOS - input */
+.catsPage_input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 30px;
+}
+.catsPage_input div {
+  height: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px 0 0 50px;
+  padding: 0 10px;
+}
+.catsPage_input input {
+  border: none;
+  width: 100%;
+  border-radius: 0 50px 50px 0;
+  height: 30px;
+  color: var(--azulEscuro);
+  font-weight: 400;
+}
+.catsPage_input input:focus {
+  outline: none;
+}
+/* PAGINA GATOS - botoes */
+.catsPage_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+  position: relative;
+  margin-top: 30px;
+}
+.catsPage_buttons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+.catsPage_buttons div:hover {
+  cursor: pointer;
+}
+.catsPage_buttons div p {
+  margin: 0 10px;
+  font-weight: 500;
+}
+.catsPage_buttons_dog {
+  background-color: white;
+  color: var(--azulEscuro);
+  padding: 10px 5px;
+  position: absolute;
+  transition: all 250ms ease;
+  width: 40%;
+}
+.catsPage_buttons_dog:hover {
+  padding: 15px 10px;
+}
+.catsPage_buttons_cat {
+  background-color: var(--laranja);
+  color: white;
+  padding: 10px 5px;
+  position: absolute;
+  transition: all 250ms ease;
+  width: 40%;
+  right: 30px;
+}
+.catsPage_buttons_cat:hover {
+  padding: 15px 10px;
+}
+/* PAGINA GATOS - lista */
+.catsPage_catsList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+/* PAGINA GATOS - cards */
+.catsPage_catsList_card {
+  width: 170px;
+  height: 260px;
+}
+.catsPage_catsList_card:hover {
+  cursor: pointer;
+}
+.catsPage_catsList_card .card_img {
+  background-color: var(--laranja);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: 160px;
+  border-radius: 30px 30px 0 0;
+}
+.catsPage_catsList_card:hover .card_img {
+  background-color: white;
+  transition: background-color 400ms 200ms ease;
+}
+.card_text {
+  background-color: white;
+  height: 100px;
+  border-radius: 0 0 30px 30px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--azulEscuro);
+}
+.card_text p:first-child {
+  font-size: 20px;
+  font-weight: 600;
+}
+.card_text div {
+  align-self: flex-end;
+}
+.catsPage_catsList_card:hover .card_text {
+  background-color: var(--laranja);
+  transition: all 400ms ease;
+  color: white;
+}
+
+/* PAGINA Karsten */
+.karstenPage {
+  background: var(--verdeClaro);
+  width: 414px;
+  min-height: 800px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+.karstenPage_top {
+  padding: 20px 0px;
+  position: absolute;
+  left: 30px;
+  transition: all 250ms ease;
+  z-index: 1;
+}
+.karstenPage_top:hover {
+  left: 20px;
+  cursor: pointer;
+}
+.karstenPage_img {
+  background-color: var(--verde);
+  position: relative;
+  border-radius: 0 0 50px 50px;
+}
+.karstenPage_img_categories {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+}
+.karstenPage_img_categories div {
+  background-color: rgba(255, 255, 255, 0.842);
+  width: 23%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+.karstenPage_img_categories div p {
+  color: var(--azulEscuro);
+}
+.karstenPage_img_categories div p:first-child {
+  font-size: 15px;
+  font-weight: 600;
+}
+.karstenPage_img_categories div p:last-child {
+  font-size: 15px;
+  margin-top: 15px;
+}
+.karstenPage_text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+}
+.karstenPage_text_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.karstenPage_text_name p {
+  color: var(--azulEscuro);
+  font-weight: 600;
+  font-size: 20px;
+}
+.karstenPage_text_name div:first-child p:last-child {
+  font-weight: 400;
+  font-size: 16px;
+}
+.karstenPage_text_owner {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 20px 0;
+  color: var(--azulEscuro);
+}
+.karstenPage_text_owner div p {
+  margin: 0 20px;
+}
+.karstenPage_text_owner div p:first-child {
+  font-weight: 600;
+}
+.karstenPage_text_button {
+  width: 100%;
+  background-color: var(--verde);
+  text-align: center;
+  color: white;
+  padding: 15px 0;
+  border-radius: 50px;
+}
+.karstenPage_text_button:hover {
+  background-color: #6fbba7;
+  cursor: pointer;
+}
+
+/* PAGINA Alex */
+.alexPage {
+  background: var(--laranjaClaro);
+  width: 414px;
+  min-height: 800px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+.alexPage_top {
+  padding: 20px 0px;
+  position: absolute;
+  left: 30px;
+  transition: all 250ms ease;
+  z-index: 1;
+}
+.alexPage_top:hover {
+  left: 20px;
+  cursor: pointer;
+}
+.alexPage_img {
+  background-color: var(--laranja);
+  position: relative;
+  border-radius: 0 0 50px 50px;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  height: 527px;
+}
+.alexPage_img_categories {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+}
+.alexPage_img_categories div {
+  background-color: rgba(255, 255, 255, 0.842);
+  width: 23%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+.alexPage_img_categories div p {
+  color: var(--azulEscuro);
+}
+.alexPage_img_categories div p:first-child {
+  font-size: 15px;
+  font-weight: 600;
+}
+.alexPage_img_categories div p:last-child {
+  font-size: 15px;
+  margin-top: 15px;
+}
+.alexPage_text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  position: relative;
+}
+.alexPage_text_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.alexPage_text_name p {
+  color: var(--azulEscuro);
+  font-weight: 600;
+  font-size: 20px;
+}
+.alexPage_text_name div:first-child p:last-child {
+  font-weight: 400;
+  font-size: 16px;
+}
+.alexPage_text_owner {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 20px 0;
+  color: var(--azulEscuro);
+}
+.alexPage_text_owner div p {
+  margin: 0 20px;
+}
+.alexPage_text_owner div p:first-child {
+  font-weight: 600;
+}
+.alexPage_text_button {
+  width: 100%;
+  background-color: var(--laranja);
+  text-align: center;
+  color: white;
+  padding: 15px 0;
+  border-radius: 50px;
+  bottom: 0;
+  transition: all 250ms ease;
+}
+.alexPage_text_button:hover {
+  background-color: #eb9465;
+  cursor: pointer;
+}

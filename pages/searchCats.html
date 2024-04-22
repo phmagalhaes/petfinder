@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petfinder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="menu" id="menu">
+      <div class="menu_home" onclick="window.location.href='../index.html'">
+        <img src="../images/1-search/fa-solid_home.svg" alt="home" />
+        <p>Home</p>
+      </div>
+      <div class="menu_dogs" onclick="window.location.href='./searchDogs.html'">
+        <img src="../images/1-search/fa-solid_dog_white.svg" alt="home" />
+        <p>Dogs</p>
+      </div>
+      <div class="menu_cats" onclick="window.location.href='./searchCats.html'">
+        <img src="../images/1-search/fa-solid_cat_white.svg" alt="home" />
+        <p>Cats</p>
+      </div>
+      <p>Double click to close</p>
+
+    </div>
+    <!-- aplicativo principal -->
+    <div class="app">
+      <!-- PAGINA GATOS -->
+      <div class="catsPage">
+        <!-- topo da pagina gatos -->
+        <div class="catsPage_top">
+          <img
+            src="../images/1-search/chevron-left.svg"
+            alt="arrow"
+            onclick="window.location.href='../index.html'"
+          />
+          <p>Search</p>
+          <img
+            src="../images/1-search/menu-open.svg"
+            alt="menu"
+            onclick="document.getElementById('menu').style.display='flex'"
+            ondblclick="document.getElementById('menu').style.display='none'"
+          />
+        </div>
+        <!-- input da pagina gatos -->
+        <div class="catsPage_input">
+          <div>
+            <img src="../images/1-search/search.svg" alt="search" />
+          </div>
+          <input type="text" />
+        </div>
+        <!-- botoes da pagina gatos -->
+        <div class="catsPage_buttons">
+          <div
+            class="catsPage_buttons_dog"
+            onclick="window.location.href='./searchDogs.html'"
+          >
+            <img src="../images/1-search/fa-solid_dog.svg" alt="dog" />
+            <p>Dog</p>
+          </div>
+          <div
+            class="catsPage_buttons_cat"
+            onclick="window.location.href='./searchCats.html'"
+          >
+            <img src="../images/1-search/fa-solid_cat_white.svg" alt="cat" />
+            <p>Cat</p>
+          </div>
+        </div>
+        <!-- lista de gatos -->
+        <div class="catsPage_catsList">
+          <div class="catsPage_catsList_card">
+            <div class="card_img">
+              <img src="../images/1-search/cats/ariana.png" alt="" />
+            </div>
+            <div class="card_text">
+              <p>Ariana</p>
+              <p>Gaycat</p>
+              <div
+                onmouseover="this.innerHTML=`<img src='../images/1-search/hearthome-active.svg' alt='hearthome-active'>`"
+                onmouseout="this.innerHTML=`<img src='../images/1-search/hearthome.svg' alt='hearthome' />`"
+              >
+                <img src="../images/1-search/hearthome.svg" alt="hearthome" />
+              </div>
+            </div>
+          </div>
+          <div class="catsPage_catsList_card">
+            <div class="card_img">
+              <img src="../images/1-search/cats/remi.png" alt="" />
+            </div>
+            <div class="card_text">
+              <p>Remi</p>
+              <p>Whitecat</p>
+              <div
+                onmouseover="this.innerHTML=`<img src='../images/1-search/hearthome-active.svg' alt='hearthome-active'>`"
+                onmouseout="this.innerHTML=`<img src='../images/1-search/hearthome.svg' alt='hearthome' />`"
+              >
+                <img src="../images/1-search/hearthome.svg" alt="hearthome" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="catsPage_catsList_card"
+            onclick="window.location.href='./cats/alex.html'"
+          >
+            <div class="card_img">
+              <img src="../images/1-search/cats/Alex.png" alt="" />
+            </div>
+            <div class="card_text">
+              <p>Alex</p>
+              <p>Siamense</p>
+              <div
+                onmouseover="this.innerHTML=`<img src='../images/1-search/hearthome-active.svg' alt='hearthome-active'>`"
+                onmouseout="this.innerHTML=`<img src='../images/1-search/hearthome.svg' alt='hearthome' />`"
+              >
+                <img src="../images/1-search/hearthome.svg" alt="hearthome" />
+              </div>
+            </div>
+          </div>
+          <div class="catsPage_catsList_card">
+            <div class="card_img">
+              <img src="../images/1-search/cats/zoe.png" alt="" />
+            </div>
+            <div class="card_text">
+              <p>Zoe</p>
+              <p>Persian</p>
+              <div
+                onmouseover="this.innerHTML=`<img src='../images/1-search/hearthome-active.svg' alt='hearthome-active'>`"
+                onmouseout="this.innerHTML=`<img src='../images/1-search/hearthome.svg' alt='hearthome' />`"
+              >
+                <img src="../images/1-search/hearthome.svg" alt="hearthome" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

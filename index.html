@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petfinder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- aplicativo principal -->
+    <div class="app">
+        <!-- PAGINA HOME -->
+        <div class="homePage">
+            <!-- botoes da pagina home para troca de imagens -->
+            <div class="homePage_button">
+                <input type="radio" name="img" value="0" checked id="radio1">
+                <label for="radio1"></label>
+                <input type="radio" name="img" value="1" id="radio2">
+                <label for="radio2"></label>
+            </div>
+            <!-- titulo da pagina home (logo e mensagem) -->
+            <div class="homePage_title">
+                <h1>petfinder</h1>
+                <p>Adopt the perfect pet of more than 700 animal shelters...</p>
+            </div>
+            <!-- imagens da pagina home trocadas conforme os botoes-->
+            <div class="homePage_img">
+                <img src="images/0-home/slide1.png" alt="children with a dog">
+                <!-- <img src="images/0-home/slide2.png" alt="woman with a dog"> -->
+            </div>
+            <!-- botao para sair da pagina home (ir para a aba de pesquisas)-->
+            <div class="homePage_search" onclick="window.location.href='./pages/searchDogs.html'">
+                <img src="images/0-home/chevron-right.svg" alt="arrow">
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
